@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tereza Creative – kontakt (Formspree) — alternativa k mailto pro spolehlivé odesílání formuláře.">
+  <title>Tereza Creative | Kontakt (Formspree)</title>
+  <style>
+    /* Minimal styles copied from main site for consistent look */
+    :root{--bg:#f8f8f4;--ink:#1b201c;--line:#dfdfd8;--white:#fff;--green:#2e4233}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);}
+    .wrap{width:min(980px,calc(100% - 32px));margin:0 auto;padding:28px;}
+    form{display:grid;gap:12px}
+    input,select,textarea,button{padding:12px;border:1px solid var(--line);border-radius:10px}
+    button{background:var(--green);color:#fff;border:0;cursor:pointer}
+    #hint{min-height:22px;color:#8a3f3f;font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Kontakt — odeslání přes Formspree</h1>
+    <p>Tato stránka je alternativa bez mailto (serverové odesílání přes Formspree). Nahraďte <code>YOUR_FORMSPREE_ID</code> svým ID z Formspree a nasdílejte.</p>
+
+    <p id="hint"></p>
+
+    <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree form ID (e.g. mf/xxxxxx or f/xxxxxx) -->
+    <form id="form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <input name="name" type="text" placeholder="Jméno" required>
+      <input name="company" type="text" placeholder="Firma">
+      <input name="reply" type="email" placeholder="Email" required>
+      <select name="service">
+        <option value="">Vyberte službu</option>
+        <option value="Balíček START">Balíček START</option>
+        <option value="Balíček STANDARD">Balíček STANDARD</option>
+        <option value="Balíček PREMIUM">Balíček PREMIUM</option>
+      </select>
+      <textarea name="message" placeholder="Zpráva"></textarea>
+      <!-- Honeypot anti-spam field (hidden from users) -->
+      <input type="text" name="_gotcha" style="display:none">
+      <!-- Optional: set a redirect or return message by Formspree settings; we handle client-side response here -->
+      <button type="submit">Odeslat</button>
+    </form>
+
+    <script>
+      // Progressive enhancement: submit via fetch to Formspree API and show UI feedback
+      (function(){
+        const form = document.getElementById('form');
+        const hint = document.getElementById('hint');
+        if(!form) return;
+
+        form.addEventListener('submit', async function(e){
+          e.preventDefault();
+          hint.textContent = 'Odesílám…';
+
+          // Build payload
+          const data = new FormData(form);
+
+          // Basic client-side spam check (honeypot)
+          if(data.get('_gotcha')){
+            hint.textContent = 'Podezřelý požadavek (spam).';
+            return;
+          }
+
+          try{
+            const action = form.action;
+            const resp = await fetch(action, {
+              method: form.method || 'POST',
+              body: data,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+            if(resp.ok){
+              hint.style.color = 'green';
+              hint.textContent = 'Děkuji — zpráva byla odeslána.';
+              form.reset();
+            } else {
+              const json = await resp.json().catch(()=>null);
+              hint.style.color = '#8a3f3f';
+              hint.textContent = (json && json.error) ? ('Chyba: '+json.error) : 'Došlo k chybě při odesílání. Zkuste to prosím později.';
+            }
+          }catch(err){
+            hint.style.color = '#8a3f3f';
+            hint.textContent = 'Chyba sítě při odesílání. Zkontrolujte připojení.';
+            console.error(err);
+          }
+        });
+      })();
+    </script>
+
+    <hr>
+    <h2>Jak získat Formspree ID</h2>
+    <ol>
+      <li>Přejděte na https://formspree.io a vytvořte si účet.</li>
+      <li>Přidejte novou formu a zkopírujte poskytnuté <code>form ID</code> (např. <code>f/xyz...</code>).</li>
+      <li>V souboru nahraďte <code>YOUR_FORMSPREE_ID</code> tímto ID.</li>
+      <li>Otestujte odeslání — dojde k doručení na vámi nastavený e‑mail.</li>
+    </ol>
+
+    <p>Pokud chcete, mohu to zařídit já (vytvořit commit s aktualizovaným ID), stačí dodat Formspree ID nebo dát mi dočasný přístup.</p>
+  </div>
+</body>
+</html>
