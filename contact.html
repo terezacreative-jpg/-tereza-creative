@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Kontakt — Tereza Creative</title>
-  <meta name="description" content="Kontaktujte Terezu — poptávky, spolupráce.">
+  <meta name="description" content="Kontaktujte mě — poptávky a spolupráce.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <a class="brand" href="/">Tereza Creative</a>
-      <button id="nav-toggle-4" class="nav-toggle" aria-expanded="false">☰</button>
+      <button id="nav-toggle-4" class="nav-toggle" aria-expanded="false">Menu</button>
       <nav id="site-nav-4" class="site-nav">
         <a href="/">Home</a>
         <a href="/about.html">O mně</a>
@@ -21,24 +21,30 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container contact">
     <h1>Kontakt</h1>
-    <p>Máte projekt nebo dotaz? Napište mi zprávu níže.</p>
+    <p class="lead">Rád(a) si poslechnu o vašem projektu — napište mi stručný popis a orientační rozpočet.</p>
 
     <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="hidden" name="_subject" value="Nová poptávka z webu Tereza Creative">
       <label for="name">Jméno</label>
       <input id="name" name="name" type="text" required>
 
       <label for="email">E-mail</label>
       <input id="email" name="email" type="email" required>
 
-      <label for="message">Zpráva</label>
+      <label for="budget">Orient. rozpočet (volitelné)</label>
+      <input id="budget" name="budget" type="text">
+
+      <label for="message">Krátký popis projektu</label>
       <textarea id="message" name="message" rows="6" required></textarea>
 
-      <button class="btn" type="submit">Odeslat</button>
+      <label><input type="checkbox" name="consent" required> Souhlasím se zpracováním osobních údajů (GDPR)</label>
+
+      <button class="btn" type="submit">Odeslat poptávku</button>
     </form>
 
-    <p class="small">Poznámka: v akci Formspree nahraďte "your-form-id" vlastním ID formuláře nebo použij jinou službu (Netlify Forms, Zapier atd.).</p>
+    <p class="small muted">Formulář používá Formspree — nahraďte `your-form-id` vlastním ID (nebo použijte Netlify Forms/Vercel serverless). Osobní údaje jsou zpracovávány pouze za účelem odpovědi na poptávku.</p>
   </main>
 
   <footer class="site-footer">

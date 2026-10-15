@@ -1,20 +1,24 @@
-# Tereza Creative — web (staging branch)
+# Tereza Creative — plně připravený web
 
-Tato větev přidává základní responzivní, vícestránkový statický web (HTML/CSS/JS) jako výchozí šablonu pro portfolio.
+Tato větev obsahuje finální verzi statického webu s rozšířenými sekcemi a vylepšeným designem:
 
-Co je v této větvi (site-enhancement):
-- index.html, about.html, portfolio.html, contact.html
-- css/styles.css — základní styly (mobile-first)
-- js/main.js — jednoduché JS pro menu, lightbox a validaci formuláře
-- assets/ — placeholder obrázek a favicon
+Co bylo provedeno
+- Kompletní multi-page web: index, about, portfolio, contact
+- Vylepšený design: nový CSS soubor s lepším layoutem a typografií, Google font Inter
+- Rozšířené sekce: services, testimonials/references, blog preview, CTA
+- Vylepšené portfolio: tři ukázkové projekty s lightboxem
+- Vylepšené JS: podporuje ESC pro zavření lightboxu, smooth scroll, lepší nav toggle
+- Formulář: zlepšený contact form s GDPR zaškrtávátkem, připravený pro Formspree
+- Assets: tři SVG ilustrace projektů + favicon
 
-Rychlé kroky k nasazení
-1. Pro lokální kontrolu otevřete soubory v prohlížeči (stačí je otevřít přímo nebo použít jednoduchý HTTP server např. `python -m http.server`).
-2. Formspree: nahradit `your-form-id` v `contact.html` svým ID nebo použít jinou službu (Netlify Forms, Zapier, atd.).
-3. Nasazení: mergeujte tuto větev do výchozí větve a aktivujte GitHub Pages (Settings → Pages) nebo použijte Netlify/Vercel.
+Další kroky / jak nasadit
+1. Pokud chcete nasadit na GitHub Pages, mergeujte větev `site-enhancement` do výchozí větve a v nastavení repo povolte Pages z hlavní větve (root).
+2. Nahraďte placeholder URL v JSON-LD (v `index.html`) skutečnou doménou.
+3. V `contact.html` nahraďte `your-form-id` vaším Formspree ID nebo nastavte Netlify Forms / serverless endpoint.
+4. Přidejte reálné obrázky projektů do `assets/images/` (doporučeno WebP pro výkon).
 
-Tipy pro další vylepšení
-- Přidat reálné obrázky do `assets/images/` (doporučeno WebP a optimalizace).
-- Přidat metriky výkonu a SEO (structured data, sitemap.xml, robots.txt).
-- Integrovat Netlify CMS nebo Eleventy pokud chcete blog.
+Ráda upravím:
+- přidání vlastního obsahu (texty, ceny, popisy projektů)
+- nastavení CNAME a vlastní domény
+- integraci Netlify CMS nebo Eleventy pro blog
 

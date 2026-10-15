@@ -3,81 +3,155 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Tereza Creative — Home</title>
-  <meta name="description" content="Tereza Creative — portfolio a služby v oblasti designu a tvorby webů.">
+  <title>Tereza Creative — Moderní weby & branding</title>
+  <meta name="description" content="Tereza Creative — Vytvářím moderní a responzivní weby, vizuální identity a produktový design pro malé firmy a tvůrce.">
   <meta property="og:title" content="Tereza Creative">
-  <meta property="og:description" content="Portfolio a služby — design, weby, branding.">
+  <meta property="og:description" content="Portfolio a služby — webdesign, branding, UX.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Tereza Creative",
+    "description": "Webdesign, branding a front-end development pro malé firmy a tvůrce.",
+    "url": "https://terezacreative.example.com",
+    "logo": "https://terezacreative.example.com/assets/favicon.svg"
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">Tereza Creative</a>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">☰</button>
-      <nav id="site-nav" class="site-nav">
-        <a href="/">Home</a>
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/assets/favicon.svg" alt="Tereza Creative" class="logo"> Tereza Creative
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Hlavní navigace">
+        <a href="#services">Služby</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#testimonials">Reference</a>
         <a href="/about.html">O mně</a>
-        <a href="/portfolio.html">Portfolio</a>
-        <a href="/contact.html">Kontakt</a>
+        <a href="/blog/index.html">Blog</a>
+        <a href="/contact.html" class="cta">Kontakt</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <h1>Vítejte u Tereza Creative</h1>
-        <p>Vytvářím moderní a responzivní weby, vizuální identity a kreativní obsah.</p>
-        <p><a class="btn" href="/portfolio.html">Prohlédnout portfolio</a></p>
+      <div class="container hero-inner">
+        <div>
+          <h1>Moderní weby, které prodávají a baví</h1>
+          <p class="lead">Pomáhám malým firmám a tvůrcům vytvářet online prezentace s jasným konceptem, skvělým UX a personalizovaným designem.</p>
+          <p>
+            <a class="btn" href="#portfolio">Prohlédnout portfolio</a>
+            <a class="btn outline" href="/contact.html">Poptat projekt</a>
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="/assets/images/project1.svg" alt="Ukázka projektu" loading="lazy">
+        </div>
       </div>
     </section>
 
-    <section class="intro container">
+    <section id="services" class="container services">
       <h2>Co nabízím</h2>
       <div class="grid grid-3">
-        <article>
-          <h3>Webdesign</h3>
-          <p>Responzivní weby postavené s ohledem na UX a výkon.</p>
+        <article class="service">
+          <h3>Webdesign & vývoj</h3>
+          <p>Responsivní weby postavené s důrazem na výkon, přístupnost a konverze (HTML, CSS, JS, optimalizace).</p>
         </article>
-        <article>
-          <h3>Branding</h3>
-          <p>Logo, vizuální styl a konzistentní design pro vaši značku.</p>
+        <article class="service">
+          <h3>Branding & identity</h3>
+          <p>Vytvořím logo, barevnou paletu a vizuální styl, který podpoří komunikaci vaší značky.</p>
         </article>
-        <article>
-          <h3>Portfolio</h3>
-          <p>Ukázky práce — od konceptu po nasazení.</p>
+        <article class="service">
+          <h3>UX & konzultace</h3>
+          <p>Analýza uživatelské cesty, wireframy a prototypy pro lepší konverzní cesty a intuitivní rozhraní.</p>
         </article>
       </div>
     </section>
 
-    <section class="container small">
-      <h2>Vybrané projekty</h2>
-      <div class="grid grid-3">
-        <a class="card" href="/portfolio.html#item1">
-          <img src="/assets/images/placeholder.svg" alt="Projekt 1">
-          <h4>Projekt 1</h4>
-        </a>
-        <a class="card" href="/portfolio.html#item2">
-          <img src="/assets/images/placeholder.svg" alt="Projekt 2">
-          <h4>Projekt 2</h4>
-        </a>
-        <a class="card" href="/portfolio.html#item3">
-          <img src="/assets/images/placeholder.svg" alt="Projekt 3">
-          <h4>Projekt 3</h4>
-        </a>
+    <section id="portfolio" class="container">
+      <h2>Portfolio</h2>
+      <p class="muted">Výběr posledních projektů</p>
+      <div class="grid grid-3 portfolio-grid">
+        <figure class="portfolio-item">
+          <img src="/assets/images/project1.svg" alt="Redesign e-shopu" data-title="Redesign e-shopu – zvýšení konverzí o 32%">
+          <figcaption>Redesign e-shopu</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="/assets/images/project2.svg" alt="Branding pro kavárnu" data-title="Kompletní branding pro lokální kavárnu">
+          <figcaption>Branding pro kavárnu</figcaption>
+        </figure>
+        <figure class="portfolio-item">
+          <img src="/assets/images/project3.svg" alt="Prezentace pro tvůrce" data-title="Jednostránková prezentace pro umělce">
+          <figcaption>Prezentace pro tvůrce</figcaption>
+        </figure>
+      </div>
+      <p class="center"><a class="btn" href="/portfolio.html">Zobrazit celé portfolio</a></p>
+    </section>
+
+    <section id="testimonials" class="container testimonials">
+      <h2>Reference</h2>
+      <div class="grid grid-2">
+        <blockquote>
+          <p>„S Terezou jsme spolupracovali na redesignu našeho e-shopu. Výsledek překonal očekávání — rychlé načítání a vyšší konverze.“</p>
+          <footer>— Jana Nováková, Owner, ShopCo</footer>
+        </blockquote>
+        <blockquote>
+          <p>„Profesionalita a cit pro detail. Komunikace byla skvělá a finální design přesně odpovídal naší představě.“</p>
+          <footer>— Petr Svoboda, Marketing</footer>
+        </blockquote>
       </div>
     </section>
+
+    <section class="container cta-section">
+      <div class="cta-inner">
+        <h3>Chcete začít nový projekt?</h3>
+        <p>Napište mi základní informace o projektu a já se ozvu s nabídkou a odhadovanou cenou.</p>
+        <a class="btn" href="/contact.html">Kontaktovat</a>
+      </div>
+    </section>
+
+    <section class="container blog-preview">
+      <h2>Ze blogu</h2>
+      <div class="grid grid-3">
+        <article class="post">
+          <a href="/blog/why-performance-matters.html"><h4>Proč záleží na výkonu webu</h4></a>
+          <p class="muted">Tipy a triky jak zrychlit stránky a zlepšit UX.</p>
+        </article>
+        <article class="post">
+          <a href="/blog/design-process.html"><h4>Jak pracuji: design proces</h4></a>
+          <p class="muted">Přehled kroků od briefu po nasazení.</p>
+        </article>
+        <article class="post">
+          <a href="/blog/branding-basics.html"><h4>Základy brandingu pro malé firmy</h4></a>
+          <p class="muted">Jak začít s konzistentní vizuální identitou.</p>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Tereza Creative · <a href="/contact.html">Kontakt</a></p>
+    <div class="container footer-inner">
+      <div>
+        <p>&copy; <span id="year"></span> Tereza Creative</p>
+        <p class="muted">Všechna práva vyhrazena • <a href="/privacy.html">Ochrana osobních údajů</a></p>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Behance">Behance</a>
+        <a href="#" aria-label="LinkedIn">LI</a>
+      </div>
     </div>
   </footer>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightbox-close" class="lightbox-close">✕</button>
+    <button id="lightbox-close" class="lightbox-close" aria-label="Zavřít">✕</button>
     <img id="lightbox-img" src="" alt="">
     <div id="lightbox-caption" class="lightbox-caption"></div>
   </div>

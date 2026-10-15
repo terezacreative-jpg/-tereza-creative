@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>O mně — Tereza Creative</title>
-  <meta name="description" content="O mně — Tereza, designerka a web developerka.">
+  <meta name="description" content="O mně — Tereza, designerka a front-end developerka. Pomáhám značkám s weby a vizuálním stylem.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/">Tereza Creative</a>
-      <button id="nav-toggle-2" class="nav-toggle" aria-expanded="false">☰</button>
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="/assets/favicon.svg" class="logo" alt="Tereza Creative"> Tereza Creative</a>
+      <button id="nav-toggle-2" class="nav-toggle" aria-expanded="false">Menu</button>
       <nav id="site-nav-2" class="site-nav">
         <a href="/">Home</a>
         <a href="/about.html">O mně</a>
@@ -21,19 +21,40 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container about">
     <h1>O mně</h1>
-    <p>Ahoj — jsem Tereza, zabývám se webovým designem, tvorbou vizuálních identit a front-endem. Pomáhám značkám najít jejich hlas online a tvořím weby, které konvertují.</p>
+    <p class="lead">Jsem Tereza — designérka a front-end developerka. Pomáhám malým firmám, kavárnám a umělcům vytvořit silnou online prezentaci.</p>
 
-    <h2>Dovednosti</h2>
-    <ul>
-      <li>HTML & CSS (responsive design)</li>
-      <li>JavaScript (vanilla)</li>
-      <li>Branding & vizuální identita</li>
-    </ul>
+    <section>
+      <h2>Moje práce</h2>
+      <p>Specializuji se na responsivní weby, branding a UX. Kombinuji estetiku s funkčností — jednoduché, čisté rozhraní, rychlé načítání a přehledné administrační rozhraní.</p>
+    </section>
 
-    <h2>Kontakt</h2>
-    <p>Nejlepší způsob, jak se spojit, je přes <a href="/contact.html">kontaktní formulář</a>.</p>
+    <section>
+      <h2>Dovednosti</h2>
+      <ul>
+        <li>HTML5, CSS3 (Flexbox, Grid), optimalizace výkonu</li>
+        <li>Vanilla JavaScript, progresivní vylepšování</li>
+        <li>Design systém, Figma — prototypování a UI</li>
+        <li>SEO základy, přístupnost (a11y)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pracovní postup</h2>
+      <ol>
+        <li>Brief &amp; research</li>
+        <li>Wireframe &amp; UX</li>
+        <li>Design &amp; prototyp</li>
+        <li>Vývoj &amp; testování</li>
+        <li>Návrh obsahu &amp; nasazení</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>Nejrychlejší cesta je přes <a href="/contact.html">kontaktní formulář</a> — přidejte krátký popis projektu a odhadovaný rozpočet.</p>
+    </section>
   </main>
 
   <footer class="site-footer">

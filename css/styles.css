@@ -1,41 +1,60 @@
-/* Basic CSS for Tereza Creative site - mobile first */
+/* Finalized CSS for Tereza Creative — improved layout and design */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 :root{
   --accent:#d6336c;
+  --accent-2:#6f42c1;
   --bg:#ffffff;
-  --text:#111827;
+  --card:#ffffff;
   --muted:#6b7280;
+  --text:#0f172a;
+  --radius:12px;
+  --container:1100px;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;color:var(--text);background:var(--bg)}
-.container{max-width:1000px;margin:0 auto;padding:1rem}
-.site-header{border-bottom:1px solid #eee}
-.site-header .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:700;text-decoration:none;color:var(--text)}
-.nav-toggle{display:inline-block;background:none;border:0;font-size:1.25rem}
-.site-nav{display:none}
-.site-nav a{display:block;padding:0.5rem 1rem;text-decoration:none;color:var(--text)}
-.hero{padding:3rem 0;text-align:center;background:linear-gradient(180deg, #fff 0%, #fff 100%)}
-.hero h1{margin:0 0 .5rem;font-size:1.75rem}
-.btn{display:inline-block;padding:.6rem 1rem;background:var(--accent);color:white;border-radius:6px;text-decoration:none}
-.intro h2{margin-top:1rem}
+body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.6;color:var(--text);background:linear-gradient(180deg,#fff,#fbfbfd)}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;text-decoration:none;color:var(--text);display:flex;gap:.5rem;align-items:center}
+.logo{width:36px;height:36px}
+.site-header{position:sticky;top:0;background:rgba(255,255,255,0.75);backdrop-filter:blur(6px);border-bottom:1px solid rgba(15,23,42,0.05);z-index:100}
+.nav-toggle{display:inline-block;background:none;border:0;font-size:1rem;padding:.5rem;border-radius:8px}
+.site-nav{display:none;gap:.5rem;align-items:center}
+.site-nav a{display:block;padding:.35rem .6rem;text-decoration:none;color:var(--text);border-radius:8px}
+.site-nav a.cta{background:var(--accent);color:#fff}
+.hero{padding:3.5rem 0}
+.hero-inner{display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center}
+.hero h1{margin:0 0 .5rem;font-size:1.9rem}
+.lead{color:var(--muted);font-size:1.05rem}
+.hero-image img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+.btn{display:inline-block;padding:.65rem 1rem;background:var(--accent);color:white;border-radius:10px;text-decoration:none;font-weight:600}
+.btn.outline{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--text)}
+.services{padding:2rem 0}
 .grid{display:grid;gap:1rem}
 .grid-3{grid-template-columns:1fr}
-.card{display:block;border:1px solid #eee;padding:.5rem;border-radius:8px;text-decoration:none;color:inherit}
-.card img{width:100%;height:150px;object-fit:cover;border-radius:4px}
-.small{max-width:780px}
-.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;text-align:center;color:var(--muted)}
-.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:200}
-.lightbox img{max-width:90%;max-height:80%}
+.grid-2{grid-template-columns:1fr}
+.service{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(15,23,42,0.04)}
+.muted{color:var(--muted)}
+.portfolio-grid .portfolio-item{cursor:pointer;border-radius:12px;overflow:hidden;background:#fff;border:1px solid rgba(15,23,42,0.04)}
+.portfolio-item img{display:block;width:100%;height:220px;object-fit:cover}
+.center{text-align:center}
+.testimonials blockquote{background:linear-gradient(180deg,#fff,#fff);padding:1rem;border-radius:12px;border:1px solid rgba(15,23,42,0.04)}
+.cta-section{background:linear-gradient(90deg,rgba(214,51,108,0.06), rgba(111,66,193,0.04));padding:2rem;border-radius:12px;margin:2rem 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.socials a{display:inline-block;margin-left:.5rem;padding:.35rem .5rem;border-radius:8px;border:1px solid rgba(15,23,42,0.04);text-decoration:none;color:var(--muted)}
+.site-footer{border-top:1px solid rgba(15,23,42,0.03);padding:1.25rem 0;margin-top:2rem;color:var(--muted)}
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.7);z-index:200;padding:2rem}
+.lightbox img{max-width:90%;max-height:80%;border-radius:8px}
 .lightbox-close{position:absolute;top:1rem;right:1rem;background:none;border:0;color:white;font-size:1.5rem}
-.portfolio-item{cursor:pointer}
-.portfolio-item img{width:100%;height:200px;object-fit:cover;border-radius:6px}
 label{display:block;margin-top:.75rem}
-input,textarea{width:100%;padding:.5rem;border:1px solid #ddd;border-radius:6px;margin-top:.25rem}
-/* Larger screens */
-@media(min-width:640px){
+input,textarea{width:100%;padding:.6rem;border:1px solid rgba(15,23,42,0.06);border-radius:10px;margin-top:.25rem}
+small.small{font-size:.85rem;color:var(--muted)}
+.post{background:#fff;padding:1rem;border-radius:12px;border:1px solid rgba(15,23,42,0.04)}
+@media(min-width:768px){
   .grid-3{grid-template-columns:repeat(3,1fr)}
-  .site-nav{display:flex;gap:.5rem}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .site-nav{display:flex}
   .nav-toggle{display:none}
-  .hero h1{font-size:2.25rem}
+  .hero-inner{grid-template-columns:1fr 460px}
+  .portfolio-item img{height:260px}
 }

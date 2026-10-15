@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portfolio — Tereza Creative</title>
-  <meta name="description" content="Portfolio Tereza Creative — ukázky projektů.">
+  <meta name="description" content="Portfolio — ukázky dokončených projektů a případové studie.">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <a class="brand" href="/">Tereza Creative</a>
-      <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false">☰</button>
+      <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false">Menu</button>
       <nav id="site-nav-3" class="site-nav">
         <a href="/">Home</a>
         <a href="/about.html">O mně</a>
@@ -23,29 +23,30 @@
 
   <main class="container">
     <h1>Portfolio</h1>
+    <p class="muted">Pečlivě vybrané případové studie a projekty.</p>
 
-    <div class="grid grid-3">
-      <figure id="item1" class="portfolio-item">
-        <img src="/assets/images/placeholder.svg" alt="Projekt 1" data-title="Projekt 1 — popis">
-        <figcaption>Projekt 1</figcaption>
+    <div class="grid grid-3 portfolio-grid">
+      <figure class="portfolio-item">
+        <img src="/assets/images/project1.svg" alt="Redesign e-shopu" data-title="Redesign e-shopu – zlepšení UX, zvýšení konverzí">
+        <figcaption>Redesign e-shopu — případová studie</figcaption>
       </figure>
 
-      <figure id="item2" class="portfolio-item">
-        <img src="/assets/images/placeholder.svg" alt="Projekt 2" data-title="Projekt 2 — popis">
-        <figcaption>Projekt 2</figcaption>
+      <figure class="portfolio-item">
+        <img src="/assets/images/project2.svg" alt="Branding pro kavárnu" data-title="Branding & packaging design">
+        <figcaption>Branding pro kavárnu</figcaption>
       </figure>
 
-      <figure id="item3" class="portfolio-item">
-        <img src="/assets/images/placeholder.svg" alt="Projekt 3" data-title="Projekt 3 — popis">
-        <figcaption>Projekt 3</figcaption>
+      <figure class="portfolio-item">
+        <img src="/assets/images/project3.svg" alt="Prezentace pro tvůrce" data-title="One-page prezentace pro tvůrce obsahu">
+        <figcaption>Prezentace pro tvůrce</figcaption>
       </figure>
 
-      <!-- Více položek lze přidat zde -->
+      <!-- Add more case studies as needed -->
     </div>
   </main>
 
   <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightbox-close-2" class="lightbox-close">✕</button>
+    <button id="lightbox-close-2" class="lightbox-close" aria-label="Zavřít">✕</button>
     <img id="lightbox-img-2" src="" alt="">
     <div id="lightbox-caption-2" class="lightbox-caption"></div>
   </div>
