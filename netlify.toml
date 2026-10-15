@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = ""
+
+# For a simple static HTML site there is no build command; Netlify will publish the repository root.
+
+[context.production.environment]
+  NODE_ENV = "production"

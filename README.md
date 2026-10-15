@@ -1,24 +1,21 @@
-# Tereza Creative — plně připravený web
+# Tereza Creative — Deployment & Netlify
 
-Tato větev obsahuje finální verzi statického webu s rozšířenými sekcemi a vylepšeným designem:
+Tato větev obsahuje finální web připravený k nasazení.
 
-Co bylo provedeno
-- Kompletní multi-page web: index, about, portfolio, contact
-- Vylepšený design: nový CSS soubor s lepším layoutem a typografií, Google font Inter
-- Rozšířené sekce: services, testimonials/references, blog preview, CTA
-- Vylepšené portfolio: tři ukázkové projekty s lightboxem
-- Vylepšené JS: podporuje ESC pro zavření lightboxu, smooth scroll, lepší nav toggle
-- Formulář: zlepšený contact form s GDPR zaškrtávátkem, připravený pro Formspree
-- Assets: tři SVG ilustrace projektů + favicon
+Netlify deployment (doporučeno)
+1. Přejděte na https://app.netlify.com/ a vytvořte nový site → "New site from Git".
+2. Připojte GitHub účet a vyberte repo `terezacreative-jpg/-tereza-creative` a větev `site-enhancement`.
+3. V nastavení buildu nechte publish directory jako `.` (root). Pro statický HTML web není potřeba build command.
+4. Po deployi otevřete Sites → Forms — Netlify automaticky detekuje formulář `contact` díky atributům `data-netlify`.
+5. Přidejte vlastní doménu `tereza.creative` v Site settings → Domain management → Add custom domain. Upravte DNS podle pokynů Netlify (CNAME/ALIAS).
 
-Další kroky / jak nasadit
-1. Pokud chcete nasadit na GitHub Pages, mergeujte větev `site-enhancement` do výchozí větve a v nastavení repo povolte Pages z hlavní větve (root).
-2. Nahraďte placeholder URL v JSON-LD (v `index.html`) skutečnou doménou.
-3. V `contact.html` nahraďte `your-form-id` vaším Formspree ID nebo nastavte Netlify Forms / serverless endpoint.
-4. Přidejte reálné obrázky projektů do `assets/images/` (doporučeno WebP pro výkon).
+GitHub Pages (alternativa)
+- Pokud místo Netlify chcete GitHub Pages, mergeujte větev `site-enhancement` do výchozí větve a v nastavení repo zapněte Pages (branch: main or default). Pro Netlify Forms je třeba použít Netlify; GitHub Pages sám o sobě formuláře neobslouží.
 
-Ráda upravím:
-- přidání vlastního obsahu (texty, ceny, popisy projektů)
-- nastavení CNAME a vlastní domény
-- integraci Netlify CMS nebo Eleventy pro blog
+CNAME
+- Do repozitáře jsem přidal soubor `CNAME` s hodnotou `tereza.creative`. Pokud budete používat Netlify, Netlify vytvoří vlastní DNS záznamy; při přímém nasazení přes GitHub Pages uložení CNAME v repu pomůže s vlastní doménou.
+
+Další kroky, které mohu udělat za vás
+- Vytvořit PR: připravil jsem popis níže.
+- Po schválení mohu provést merge a pomoci nastavit DNS (budete potřebovat přístup k registru domény).
 
