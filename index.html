@@ -1,42 +1,205 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Tereza Creative – tvorba videí a obsahu na sociální sítě pro malé podnikatele v Humpolci a okolí.">
-<title>Tereza Creative | Videa, která pomáhají získávat zákazníky</title>
-<style>
-:root{--bg:#f8f8f4;--ink:#202722;--muted:#667067;--green:#354a3b;--pale:#eaf0e6;--line:#e1e6dd}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:.12em;font-size:14px;display:flex;gap:10px;align-items:center}.mark{width:34px;height:34px;border:2px solid var(--green);border-radius:11px;display:grid;place-items:center}.mark:after{content:'';width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid var(--green);margin-left:3px}.links{display:flex;gap:23px;align-items:center;font-size:14px;color:var(--muted)}.btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 19px;border-radius:99px;background:var(--green);color:white;font-weight:750;font-size:14px;border:1px solid var(--green);cursor:pointer}.btn.alt{background:transparent;color:var(--green)}.hero{padding:65px 0 85px;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:850;color:var(--green)}h1{font-size:clamp(42px,6vw,70px);line-height:1.03;letter-spacing:-.055em;margin:20px 0}h1 em{color:#71876f;font-style:normal}.lead{font-size:18px;color:var(--muted);max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.local{margin-top:22px;color:var(--muted);font-size:13px}.art{height:440px;border-radius:28px;background:radial-gradient(circle at 70% 20%,#fff9,#fff0 24%),linear-gradient(140deg,#dfe8d9,#9eaf9a);position:relative;overflow:hidden;padding:22px;display:flex;align-items:flex-end;box-shadow:0 18px 50px #24362912}.artbox{position:absolute;inset:28px 28px 90px;border:1px solid #ffffffb0;border-radius:18px;background:linear-gradient(150deg,#e8eee2,#a5b9a0 60%,#738a75);overflow:hidden}.sun{position:absolute;right:14%;top:13%;width:125px;height:125px;border-radius:50%;background:#ffffff88}.arch{position:absolute;bottom:0;left:19%;height:70%;width:62%;border:2px solid #ffffffb0;border-bottom:0;border-radius:150px 150px 0 0}.person{position:absolute;bottom:0;left:40%;height:63%;width:24%;background:#455b49;border-radius:50% 50% 0 0}.person:before{content:'';position:absolute;top:-20%;left:24%;width:52%;aspect-ratio:1;border-radius:50%;background:#d4b69c}.play{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:#ffffffe0;display:grid;place-items:center}.play:after{content:'';border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:12px solid var(--green);margin-left:3px}.caption{position:relative;background:#ffffffdf;border-radius:15px;padding:14px 16px;width:100%;font-size:14px}.caption small{display:block;color:var(--muted)}section{padding:76px 0}.white{background:#fff}.head{max-width:680px;margin-bottom:32px}.head h2{font-size:clamp(30px,4vw,45px);line-height:1.1;letter-spacing:-.04em;margin:12px 0}.head p{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);background:white;border-radius:20px;padding:24px}.ico{width:42px;height:42px;border-radius:13px;background:var(--pale);display:grid;place-items:center;color:var(--green);font-size:20px}.card h3{margin:15px 0 6px}.card p{color:var(--muted);font-size:14px;margin:0}.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}.pills{display:flex;gap:9px;flex-wrap:wrap}.pill{border:1px solid #dce4d8;border-radius:99px;padding:9px 13px;background:#fff;font-size:14px}.checks{margin-top:25px}.check{padding:14px 0;border-bottom:1px solid var(--line)}.check b{display:block}.check span{font-size:14px;color:var(--muted)}.portfolio{background:#edf1e9}.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.sample{background:white;border:1px solid #dce3d9;border-radius:18px;overflow:hidden}.sample-art{height:190px;display:grid;place-items:center;font-size:45px;color:#526a55;background:linear-gradient(140deg,#d9e3d4,#91a88f)}.sample:nth-child(2) .sample-art{background:linear-gradient(140deg,#eee4d4,#b8a68e)}.sample:nth-child(3) .sample-art{background:linear-gradient(140deg,#d9e3e2,#8ea8a6)}.sample-info{padding:15px}.sample-info small{display:block;color:var(--muted)}.notice,.fine{font-size:12px;color:var(--muted);margin-top:15px}.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.price{border:1px solid var(--line);border-radius:22px;padding:25px;background:#fff;display:flex;flex-direction:column}.price.feature{background:#edf2e9;border-color:#b8c9b4}.plan{font-size:12px;letter-spacing:.13em;font-weight:850;color:var(--green)}.amount{font-size:35px;font-weight:850;letter-spacing:-.04em;margin-top:8px}.price p,.price li{font-size:14px;color:var(--muted)}.price ul{padding-left:19px;margin-bottom:25px}.price .btn{margin-top:auto}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{border-top:2px solid #c5d2c0;padding-top:15px}.step small{color:#70876f;font-weight:850;letter-spacing:.12em}.step p{font-size:14px;color:var(--muted)}details{padding:18px 0;border-bottom:1px solid var(--line)}summary{font-weight:750;cursor:pointer}details p{color:var(--muted);font-size:14px}.faqbox{max-width:820px}.contact{background:var(--green);color:white}.contact .eyebrow{color:#dbe8d5}.contact .head p{color:#d7e0d5}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px}.form{background:#fff;color:var(--ink);padding:24px;border-radius:20px;display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:5px}.field.full,.form button,.form .hint{grid-column:1/-1}.field label{font-size:12px;font-weight:800}.field input,.field select,.field textarea{padding:12px;border:1px solid var(--line);border-radius:10px;background:#fbfcf9;font:inherit;width:100%}.field textarea{min-height:100px}.hint{font-size:12px;color:var(--muted)}footer{padding:25px 0;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:12px}.menu{display:none}
-@media(max-width:800px){.hero{grid-template-columns:1fr;gap:28px;padding-top:40px}.art{height:350px}.grid{grid-template-columns:repeat(2,1fr)}.two,.contact-grid{grid-template-columns:1fr;gap:28px}.prices,.samples{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.links{gap:12px}}
-@media(max-width:600px){.nav{height:68px}.menu{display:block;border:0;background:none;font-size:24px}.links{display:none;position:absolute;top:62px;left:18px;right:18px;background:#fff;padding:18px;border:1px solid var(--line);border-radius:16px;z-index:5;flex-direction:column;align-items:stretch}.links.open{display:flex}.hero h1{font-size:44px}.lead{font-size:16px}section{padding:58px 0}.grid,.prices,.samples{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.form{grid-template-columns:1fr;padding:17px}.field.full,.form button,.form .hint{grid-column:auto}footer{flex-direction:column}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
-<header class="wrap"><nav class="nav"><a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a><button class="menu" id="menu" aria-label="Otevřít navigaci">☰</button><div class="links" id="links"><a href="#sluzby">Služby</a><a href="#ukazky">Ukázky</a><a href="#balicky">Balíčky</a><a href="#postup">Jak to funguje</a><a class="btn" href="#kontakt">Nezávazně poptat ↗</a></div></nav></header>
-<main>
-<section class="wrap hero" id="domu"><div><div class="eyebrow">Video tvorba pro malé podnikatele</div><h1>Videa, která pomáhají <em>získávat zákazníky.</em></h1><p class="lead">Pomáhám místním podnikatelům ukázat jejich práci v tom nejlepším světle. Tvořím moderní videa a obsah na sociální sítě, aby jejich služby byly lépe vidět.</p><div class="actions"><a class="btn" href="#kontakt">Chci video pro svou firmu ↗</a><a class="btn alt" href="#sluzby">Prohlédnout služby</a></div><div class="local">● Osobní přístup · Humpolec a okolí</div></div><div class="art" aria-label="Stylizovaný obrazový záběr"><div class="artbox"><div class="sun"></div><div class="arch"></div><div class="person"></div><div class="play"></div></div><div class="caption"><b>Vaše práce. V tom nejlepším světle.</b><small>Autentický obsah pro vaše podnikání</small></div></div></section>
-<section class="white" id="sluzby"><div class="wrap"><div class="head"><div class="eyebrow">Co pro vás můžu vytvořit</div><h2>Obsah, který ukáže, co umíte.</h2><p>Nemusíte být marketingový expert. Společně najdeme způsob, jak přirozeně představit vaši práci lidem, kteří hledají právě vaše služby.</p></div><div class="grid">
-<article class="card"><div class="ico">▶</div><h3>Natáčení u vás</h3><p>Přijedu do provozovny nebo na místo zakázky a zachytím vaši práci, postup i výsledky přímo v akci.</p></article>
-<article class="card"><div class="ico">✂</div><h3>Střih a úpravy</h3><p>Z natočeného materiálu připravím svižné video s hudbou, titulky a úpravou obrazu.</p></article>
-<article class="card"><div class="ico">▣</div><h3>Reels a krátká videa</h3><p>Vertikální videa pro Instagram Reels, TikTok a Facebook, připravená ke sdílení.</p></article>
-<article class="card"><div class="ico">↗</div><h3>Prezentace realizací</h3><p>Ukažte své produkty, provozovnu, hotové zakázky nebo proměnu před a po dokončení práce.</p></article>
-<article class="card"><div class="ico">✎</div><h3>Texty a popisky</h3><p>Pomůžu s popisky k videím, texty příspěvků a nápady, co o své práci sdílet.</p></article>
-<article class="card"><div class="ico">↻</div><h3>Pravidelný obsah</h3><p>Naplánujeme obsah dopředu a domluvíme dlouhodobou spolupráci podle vašich potřeb.</p></article></div></div></section>
-<section><div class="wrap two"><div><div class="eyebrow">Pro koho tvořím</div><div class="head"><h2>Nemusíte být velká firma, abyste byli vidět.</h2><p>Spolupráci přizpůsobím vašemu oboru, možnostem a cílům. Nemusíte mít zkušenosti se sociálními sítěmi ani přesně vědět, co natáčet.</p></div><a class="btn" href="#kontakt">Probrat můj nápad ↗</a></div><div><div class="pills"><span class="pill">Řemeslníci</span><span class="pill">Stavební firmy</span><span class="pill">Truhláři</span><span class="pill">Instalatéři</span><span class="pill">Elektrikáři</span><span class="pill">Autoservisy</span><span class="pill">Zahradníci</span><span class="pill">Kadeřnictví</span><span class="pill">Kosmetická studia</span><span class="pill">Restaurace a kavárny</span><span class="pill">Ubytování</span><span class="pill">Trenéři a služby</span></div><div class="checks"><div class="check"><b>✓ Domluva bez složitostí</b><span>Vysvětlíme si, co potřebujete, a navrhneme praktické řešení.</span></div><div class="check"><b>✓ Natáčení přímo na místě</b><span>Obsah vzniká tam, kde vaše práce skutečně probíhá.</span></div><div class="check"><b>✓ Obsah podle vašeho oboru</b><span>Ukážeme to, co je důležité právě pro vaše zákazníky.</span></div><div class="check"><b>✓ Možnost začít postupně</b><span>Začnete menším balíčkem a podle potřeby spolupráci rozšíříte.</span></div></div></div></div></section>
-<section class="portfolio" id="ukazky"><div class="wrap"><div class="head"><div class="eyebrow">Ukázky tvorby</div><h2>Každá práce má svůj příběh.</h2><p>Sem patří vaše videa a fotografie. Následující grafické koncepty zatím nejsou skutečné realizace ani reference.</p></div><div class="samples"><article class="sample"><div class="sample-art">⌂</div><div class="sample-info"><b>Řemesla a realizace</b><small>Ukázkový koncept · doplnit vlastní video</small></div></article><article class="sample"><div class="sample-art">✳</div><div class="sample-info"><b>Služby a provozovny</b><small>Ukázkový koncept · doplnit vlastní video</small></div></article><article class="sample"><div class="sample-art">◉</div><div class="sample-info"><b>Proměna před a po</b><small>Ukázkový koncept · doplnit vlastní video</small></div></article></div><p class="notice">Až budeš mít svolení klientů ke zveřejnění, nahraď koncepty skutečnými ukázkami své práce.</p></div></section>
-<section class="white" id="balicky"><div class="wrap"><div class="head"><div class="eyebrow">Balíčky spolupráce</div><h2>Začněte v rozsahu, který vám vyhovuje.</h2><p>Orientační návrhy balíčků. Konečnou podobu spolupráce přizpůsobíme konkrétním potřebám.</p></div><div class="prices">
-<article class="price"><div class="plan">START</div><div class="amount">4 000 Kč</div><small>navrhovaná cena za balíček</small><p>Pro první krok a ověření, jaký obsah vám sedí.</p><ul><li>3 krátká videa</li><li>Střih a titulky</li><li>Základní popisky</li><li>Konzultace k obsahu</li></ul><a class="btn alt" href="#kontakt" data-plan="START">Mám zájem</a></article>
-<article class="price feature"><div class="plan">STANDARD</div><div class="amount">8 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pravidelný obsah, který pomáhá zůstat zákazníkům na očích.</p><ul><li>6 krátkých videí měsíčně</li><li>Plán obsahu</li><li>Střih, titulky a popisky</li><li>Základní pomoc se správou profilu</li></ul><a class="btn" href="#kontakt" data-plan="STANDARD">Mám zájem ↗</a></article>
-<article class="price"><div class="plan">PREMIUM</div><div class="amount">Od 12 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pro firmy, které chtějí tvořit obsah pravidelně a systematicky.</p><ul><li>8 a více krátkých videí měsíčně</li><li>Pravidelná tvorba obsahu</li><li>Obsahová strategie a konzultace</li><li>Možnost domluvit reklamní kampaně</li></ul><a class="btn alt" href="#kontakt" data-plan="PREMIUM">Domluvit rozsah</a></article></div><p class="fine">Ceny jsou navrhované a mohou se změnit podle rozsahu práce. Doprava, reklamní rozpočet a rozsáhlejší správa profilů se nacení individuálně. Konkrétní podmínky si potvrdíme před zahájením spolupráce.</p></div></section>
-<section id="postup"><div class="wrap"><div class="head"><div class="eyebrow">Jak spolupráce probíhá</div><h2>Od prvního nápadu k hotovému videu.</h2><p>Jednoduše, srozumitelně a bez zbytečné administrativy.</p></div><div class="steps"><article class="step"><small>KROK 01</small><h3>Probereme cíle</h3><p>Řekneme si, co děláte a co chcete zákazníkům ukázat.</p></article><article class="step"><small>KROK 02</small><h3>Domluvíme natáčení</h3><p>Vybereme termín a místo, kde zachytíme vaši práci.</p></article><article class="step"><small>KROK 03</small><h3>Připravím obsah</h3><p>Videa sestříhám, doplním titulky a připravím dohodnuté materiály.</p></article><article class="step"><small>KROK 04</small><h3>Předám videa</h3><p>Dostanete obsah připravený k použití podle naší dohody.</p></article></div></div></section>
-<section class="white"><div class="wrap"><div class="head"><div class="eyebrow">Časté otázky</div><h2>Co vás možná zajímá.</h2></div><div class="faqbox">
-<details><summary>Musím mít vlastní sociální sítě?</summary><p>Ne nutně. Můžeme probrat, kde chcete obsah používat a co pro vaše podnikání dává smysl.</p></details>
-<details><summary>Musím přesně vědět, co natáčet?</summary><p>Nemusíte. Společně vymyslíme témata podle vašeho oboru a toho, co chcete zákazníkům ukázat.</p></details>
-<details><summary>Jak dlouho trvá příprava videa?</summary><p>Záleží na délce, náročnosti střihu a dohodnutém rozsahu. Termín si potvrdíme předem.</p></details>
-<details><summary>Přijedeš natáčet přímo ke mně?</summary><p>Natáčení na provozovně nebo místě zakázky lze domluvit v Humpolci a okolí. Případná doprava se upřesní při domluvě.</p></details>
-<details><summary>Mohu si objednat jen jedno video?</summary><p>Jednorázovou zakázku můžeme probrat individuálně podle požadovaného rozsahu.</p></details>
-<details><summary>Pomůžeš mi i s pravidelným obsahem?</summary><p>Ano, můžeme naplánovat dlouhodobou spolupráci a pravidelnou tvorbu obsahu.</p></details>
-<details><summary>Kolik spolupráce stojí?</summary><p>Na webu jsou navrhované balíčky. Konečná cena závisí na rozsahu, místě natáčení a dohodnutých výstupech.</p></details>
-</div></div></section>
-<section class="contact" id="kontakt"><div class="wrap contact-grid"><div><div class="eyebrow">Pojďme se domluvit</div><h2 style="font-size:clamp(34px,4.5vw,52px);line-height:1.1;letter-spacing:-.04em">Pojďme ukázat vaši práci více lidem.</h2><p>Napište mi, čemu se věnujete a jaký obsah by vám pomohl. Společně probereme možnosti bez závazků.</p><p><b>Tereza Creative</b><br>Video tvorba · Humpolec a okolí</p><p style="font-size:13px">Kontaktní údaje doplň před zveřejněním webu.</p></div><form class="form" id="form"><div class="field"><label for="name">Jméno *</label><input id="name" name="name" required placeholder="Vaše jméno"></div><div class="field"><label for="company">Firma</label><input id="company" name="company" placeholder="Název firmy"></div><div class="field"><label for="reply">Telefon nebo e-mail *</label><input id="reply" name="reply" required placeholder="Kam se vám ozvat?"></div><div class="field"><label for="service">O co máte zájem?</label><select id="service" name="service"><option value="">Vyberte službu</option><option>Jedno video</option><option>Balíček START</option><option>Balíček STANDARD</option><option>Balíček PREMIUM</option><option>Pravidelná tvorba obsahu</option><option>Jiná domluva</option></select></div><div class="field full"><label for="message">Zpráva *</label><textarea id="message" name="message" required placeholder="Krátce popište své podnikání a co potřebujete."></textarea></div><button class="btn" type="submit">Nezávazně poptat spolupráci ↗</button><p class="hint" id="hint">Formulář potřebuje doplnit tvůj skutečný e-mail v souboru index.html. Viz README.txt.</p></form></div></section>
-</main><footer class="wrap"><a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a><span>Videa, která pomáhají získávat zákazníky.</span><span>© <span id="year"></span> Tereza Creative</span></footer>
-<script>
-const menu=document.getElementById('menu'),links=document.getElementById('links');menu.addEventListener('click',()=>{links.classList.toggle('open');menu.textContent=links.classList.contains('open')?'×':'☰'});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>document.getElementById('service').value='Balíček '+a.dataset.plan));
-const CONTACT_EMAIL='';document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();if(!CONTACT_EMAIL){document.getElementById('hint').textContent='Formulář zatím není napojený na e-mail. Doplň svůj e-mail do proměnné CONTACT_EMAIL v index.html.';return}const d=new FormData(e.target),body=encodeURIComponent('Jméno: '+d.get('name')+'\nFirma: '+d.get('company')+'\nKontakt: '+d.get('reply')+'\nSlužba: '+d.get('service')+'\n\nZpráva:\n'+d.get('message'));location.href='mailto:'+CONTACT_EMAIL+'?subject='+encodeURIComponent('Poptávka – Tereza Creative')+'&body='+body});
-</script></body></html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Tereza Creative – tvorba videí a obsahu na sociální sítě pro malé podnikatele v Humpolci a okolí.">
+  <title>Tereza Creative | Videa, která pomáhají získávat zákazníky</title>
+  <style>
+    :root {
+      --bg:#f8f8f4; --ink:#1b201c; --muted:#667067; --green:#2e4233; --pale:#edf1ea; --line:#dfdfd8; --white:#ffffff;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6;
+    }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1160px, calc(100% - 32px)); margin:0 auto; }
+    header { position:sticky; top:0; z-index:10; backdrop-filter: blur(8px); background:rgba(248,248,244,0.88); border-bottom:1px solid var(--line); }
+    .nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; }
+    .brand { display:inline-flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .mark { width:12px; height:12px; background:var(--green); border-radius:50%; display:inline-block; }
+    .menu { display:none; }
+    .links { display:flex; gap:22px; align-items:center; }
+    .links a { color:var(--muted); font-size:.95rem; }
+    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center; padding:56px 0 40px; }
+    h1, h2, h3 { line-height:1.08; margin:0 0 16px; letter-spacing:-.04em; }
+    h1 { font-size:clamp(2.8rem, 5vw, 5rem); }
+    .eyebrow { display:inline-block; margin-bottom:16px; padding:7px 12px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--green); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+    .lead { color:var(--muted); font-size:1.08rem; max-width:60ch; }
+    .art { min-height:420px; border-radius:26px; background:linear-gradient(135deg,#dfead7,#b9d0b5 55%,#7f967d); box-shadow:0 28px 60px rgba(32,39,34,.08); position:relative; overflow:hidden; }
+    .art::before, .art::after { content:""; position:absolute; border-radius:50%; }
+    .art::before { width:220px; height:220px; background:rgba(255,255,255,.35); right:36px; top:36px; }
+    .art::after { width:200px; height:200px; background:rgba(255,255,255,.22); left:24px; bottom:22px; }
+    section { padding:32px 0; }
+    .white { background:#fff; }
+    .head { margin-bottom:24px; }
+    .grid { display:grid; gap:22px; grid-template-columns:repeat(3,1fr); }
+    .card, .price, .faqbox, .contact form {
+      background:var(--white); border:1px solid var(--line); border-radius:20px; padding:24px;
+    }
+    .card h3 { margin-top:12px; font-size:1.4rem; }
+    .ico { width:56px; height:56px; border-radius:14px; display:grid; place-items:center; background:var(--pale); color:var(--green); font-size:1.5rem; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
+    form { display:grid; gap:14px; }
+    input, select, textarea, button {
+      width:100%; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font:inherit; }
+    textarea { min-height:130px; resize:vertical; }
+    button {
+      background:var(--green); color:#fff; border:0; cursor:pointer; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    }
+    #hint { min-height:20px; color:#8a3f3f; font-weight:600; }
+    footer {
+      display:flex; gap:18px; justify-content:space-between; align-items:center; padding:28px 0 54px; color:var(--muted); flex-wrap:wrap; border-top:1px solid var(--line);
+    }
+    @media (max-width: 800px) {
+      .hero, .contact-grid, .grid { grid-template-columns:1fr; }
+      .menu { display:block; border:0; background:none; font-size:28px; padding:0; }
+      .links { display:none; position:absolute; top:78px; left:16px; right:16px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; flex-direction:column; align-items:flex-start; }
+      .links.open { display:flex; }
+      .nav { position:relative; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a>
+      <button class="menu" id="menu" aria-label="Otevřít navigaci">☰</button>
+      <div class="links" id="links">
+        <a href="#domu">Domů</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#ukazky">Ukázky</a>
+        <a href="#balicky">Balíčky</a>
+        <a href="#postup">Postup</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="domu">
+      <div>
+        <div class="eyebrow">Video tvorba pro malé podnikatele</div>
+        <h1>Videa, která pomáhají <em>získávat zákazníky.</em></h1>
+        <p class="lead">Pomáhám podnikatelům vytvářet obsah, který je spojuje s lidmi, kteří hledají přesně jejich službu.</p>
+      </div>
+      <div class="art" aria-label="Ukázka videa a obsahu"></div>
+    </section>
+
+    <section class="white" id="sluzby">
+      <div class="wrap">
+        <div class="head">
+          <div class="eyebrow">Co pro vás můžu vytvořit</div>
+          <h2>Obsah, který ukáže, co umíte.</h2>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="ico">▶</div><h3>Natáčení u vás</h3><p>Přijedu do provozovny nebo na místo zakázky a zachytím práci, postup i výsledky přímo v akci.</p></article>
+          <article class="card"><div class="ico">✂</div><h3>Střih a úpravy</h3><p>Z natočeného materiálu připravím svižné video s hudbou, titulky a úpravou obrazu.</p></article>
+          <article class="card"><div class="ico">▣</div><h3>Reels a krátká videa</h3><p>Vertikální videa pro Instagram Reels, TikTok a Facebook, připravená ke sdílení.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ukazky">
+      <div class="wrap">
+        <div class="head">
+          <div class="eyebrow">Ukázky tvorby</div>
+          <h2>Každá práce má svůj příběh.</h2>
+        </div>
+        <p class="lead">Vytvářím obsah pro firmy, které chtějí být vidět, lidé je poznat a rozhodovat se pro ně snadněji.</p>
+      </div>
+    </section>
+
+    <section class="white" id="balicky">
+      <div class="wrap">
+        <div class="head">
+          <div class="eyebrow">Balíčky spolupráce</div>
+          <h2>Začněte v rozsahu, který vám vyhovuje.</h2>
+        </div>
+        <div class="grid">
+          <article class="price"><div class="plan">START</div><div class="amount">4 000 Kč</div><small>navrhovaná cena za balíček</small><p>Pro první krok a ověření, jaký obsah vám sedí.</p></article>
+          <article class="price feature"><div class="plan">STANDARD</div><div class="amount">8 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pravidelný obsah, který pomáhá zůstat zákazníkům v kontaktu.</p></article>
+          <article class="price"><div class="plan">PREMIUM</div><div class="amount">Od 12 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pro firmy, které chtějí tvořit obsah pravidelně a systematicky.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="postup">
+      <div class="wrap">
+        <div class="head">
+          <div class="eyebrow">Jak spolupráce probíhá</div>
+          <h2>Od nápadu k hotovému videu.</h2>
+        </div>
+        <p class="lead">Nejprve si domluvíme cíl, pak navrhnu obsah, natočíme a dokončíme vše tak, aby to bylo připravené ke zveřejnění.</p>
+      </div>
+    </section>
+
+    <section class="white" id="kontakt">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="eyebrow">Pojďme se domluvit</div>
+          <h2>Napište mi a domluvíme se na dalším kroku.</h2>
+          <p id="hint"></p>
+        </div>
+        <form id="form">
+          <input name="name" type="text" placeholder="Jméno" required>
+          <input name="company" type="text" placeholder="Firma">
+          <input name="reply" type="email" placeholder="Email nebo telefon" required>
+          <select id="service" name="service">
+            <option value="">Vyberte službu</option>
+            <option value="Balíček START">Balíček START</option>
+            <option value="Balíček STANDARD">Balíček STANDARD</option>
+            <option value="Balíček PREMIUM">Balíček PREMIUM</option>
+          </select>
+          <textarea name="message" placeholder="Zpráva"></textarea>
+          <button type="submit">Odeslat</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a>
+    <span>Videa, která pomáhají získávat zákazníky.</span>
+    <span>© <span id="year"></span> Tereza Creative</span>
+  </footer>
+
+  <script>
+    const menu = document.getElementById('menu');
+    const links = document.getElementById('links');
+
+    if (menu && links) {
+      menu.addEventListener('click', () => {
+        links.classList.toggle('open');
+        menu.textContent = links.classList.contains('open') ? '×' : '☰';
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const CONTACT_EMAIL = 'tereza.creative@gmail.com';
+
+    document.getElementById('form')?.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!CONTACT_EMAIL) {
+        document.getElementById('hint').textContent = 'Formulář zatím není napojený na e-mail. Doplň svůj e-mail do proměnné CONTACT_EMAIL v index.html.';
+        return;
+      }
+
+      const d = new FormData(e.target);
+      const body = encodeURIComponent(
+        'Jméno: ' + d.get('name') + '\n' +
+        'Firma: ' + d.get('company') + '\n' +
+        'Kontakt: ' + d.get('reply') + '\n' +
+        'Služba: ' + d.get('service') + '\n\n' +
+        'Zpráva:\n' + d.get('message')
+      );
+
+      location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Poptávka – Tereza Creative') + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
