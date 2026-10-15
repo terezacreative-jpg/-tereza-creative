@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt — Tereza Creative</title>
+  <meta name="description" content="Kontaktujte Terezu — poptávky, spolupráce.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Tereza Creative</a>
+      <button id="nav-toggle-4" class="nav-toggle" aria-expanded="false">☰</button>
+      <nav id="site-nav-4" class="site-nav">
+        <a href="/">Home</a>
+        <a href="/about.html">O mně</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Kontakt</h1>
+    <p>Máte projekt nebo dotaz? Napište mi zprávu níže.</p>
+
+    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Jméno</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="message">Zpráva</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Odeslat</button>
+    </form>
+
+    <p class="small">Poznámka: v akci Formspree nahraďte "your-form-id" vlastním ID formuláře nebo použij jinou službu (Netlify Forms, Zapier atd.).</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year-4"></span> Tereza Creative</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

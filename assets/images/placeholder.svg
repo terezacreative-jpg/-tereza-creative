@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="placeholder image">
+  <rect width="100%" height="100%" fill="#f3f4f6" />
+  <g fill="#e5e7eb">
+    <rect x="80" y="80" width="1040" height="240" rx="12" />
+    <rect x="80" y="360" width="560" height="320" rx="12" />
+    <rect x="660" y="360" width="360" height="320" rx="12" />
+  </g>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9ca3af" font-size="28">Zde vložte obrázek projektu</text>
+</svg>

@@ -3,203 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Tereza Creative – tvorba videí a obsahu na sociální sítě pro malé podnikatele v Humpolci a okolí.">
-  <title>Tereza Creative | Videa, která pomáhají získávat zákazníky</title>
-  <style>
-    :root {
-      --bg:#f8f8f4; --ink:#1b201c; --muted:#667067; --green:#2e4233; --pale:#edf1ea; --line:#dfdfd8; --white:#ffffff;
-    }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6;
-    }
-    a { color:inherit; text-decoration:none; }
-    .wrap { width:min(1160px, calc(100% - 32px)); margin:0 auto; }
-    header { position:sticky; top:0; z-index:10; backdrop-filter: blur(8px); background:rgba(248,248,244,0.88); border-bottom:1px solid var(--line); }
-    .nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; }
-    .brand { display:inline-flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-    .mark { width:12px; height:12px; background:var(--green); border-radius:50%; display:inline-block; }
-    .menu { display:none; }
-    .links { display:flex; gap:22px; align-items:center; }
-    .links a { color:var(--muted); font-size:.95rem; }
-    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center; padding:56px 0 40px; }
-    h1, h2, h3 { line-height:1.08; margin:0 0 16px; letter-spacing:-.04em; }
-    h1 { font-size:clamp(2.8rem, 5vw, 5rem); }
-    .eyebrow { display:inline-block; margin-bottom:16px; padding:7px 12px; border:1px solid var(--line); border-radius:999px; background:var(--white); color:var(--green); font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
-    .lead { color:var(--muted); font-size:1.08rem; max-width:60ch; }
-    .art { min-height:420px; border-radius:26px; background:linear-gradient(135deg,#dfead7,#b9d0b5 55%,#7f967d); box-shadow:0 28px 60px rgba(32,39,34,.08); position:relative; overflow:hidden; }
-    .art::before, .art::after { content:""; position:absolute; border-radius:50%; }
-    .art::before { width:220px; height:220px; background:rgba(255,255,255,.35); right:36px; top:36px; }
-    .art::after { width:200px; height:200px; background:rgba(255,255,255,.22); left:24px; bottom:22px; }
-    section { padding:32px 0; }
-    .white { background:#fff; }
-    .head { margin-bottom:24px; }
-    .grid { display:grid; gap:22px; grid-template-columns:repeat(3,1fr); }
-    .card, .price, .faqbox, .contact form {
-      background:var(--white); border:1px solid var(--line); border-radius:20px; padding:24px;
-    }
-    .card h3 { margin-top:12px; font-size:1.4rem; }
-    .ico { width:56px; height:56px; border-radius:14px; display:grid; place-items:center; background:var(--pale); color:var(--green); font-size:1.5rem; }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:start; }
-    form { display:grid; gap:14px; }
-    input, select, textarea, button {
-      width:100%; border:1px solid var(--line); border-radius:12px; padding:14px 16px; font:inherit; }
-    textarea { min-height:130px; resize:vertical; }
-    button {
-      background:var(--green); color:#fff; border:0; cursor:pointer; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
-    }
-    #hint { min-height:20px; color:#8a3f3f; font-weight:600; }
-    footer {
-      display:flex; gap:18px; justify-content:space-between; align-items:center; padding:28px 0 54px; color:var(--muted); flex-wrap:wrap; border-top:1px solid var(--line);
-    }
-    @media (max-width: 800px) {
-      .hero, .contact-grid, .grid { grid-template-columns:1fr; }
-      .menu { display:block; border:0; background:none; font-size:28px; padding:0; }
-      .links { display:none; position:absolute; top:78px; left:16px; right:16px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:16px; flex-direction:column; align-items:flex-start; }
-      .links.open { display:flex; }
-      .nav { position:relative; }
-    }
-  </style>
+  <title>Tereza Creative — Home</title>
+  <meta name="description" content="Tereza Creative — portfolio a služby v oblasti designu a tvorby webů.">
+  <meta property="og:title" content="Tereza Creative">
+  <meta property="og:description" content="Portfolio a služby — design, weby, branding.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a>
-      <button class="menu" id="menu" aria-label="Otevřít navigaci">☰</button>
-      <div class="links" id="links">
-        <a href="#domu">Domů</a>
-        <a href="#sluzby">Služby</a>
-        <a href="#ukazky">Ukázky</a>
-        <a href="#balicky">Balíčky</a>
-        <a href="#postup">Postup</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Tereza Creative</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="/">Home</a>
+        <a href="/about.html">O mně</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/contact.html">Kontakt</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="wrap hero" id="domu">
-      <div>
-        <div class="eyebrow">Video tvorba pro malé podnikatele</div>
-        <h1>Videa, která pomáhají <em>získávat zákazníky.</em></h1>
-        <p class="lead">Pomáhám podnikatelům vytvářet obsah, který je spojuje s lidmi, kteří hledají přesně jejich službu.</p>
-      </div>
-      <div class="art" aria-label="Ukázka videa a obsahu"></div>
-    </section>
-
-    <section class="white" id="sluzby">
-      <div class="wrap">
-        <div class="head">
-          <div class="eyebrow">Co pro vás můžu vytvořit</div>
-          <h2>Obsah, který ukáže, co umíte.</h2>
-        </div>
-        <div class="grid">
-          <article class="card"><div class="ico">▶</div><h3>Natáčení u vás</h3><p>Přijedu do provozovny nebo na místo zakázky a zachytím práci, postup i výsledky přímo v akci.</p></article>
-          <article class="card"><div class="ico">✂</div><h3>Střih a úpravy</h3><p>Z natočeného materiálu připravím svižné video s hudbou, titulky a úpravou obrazu.</p></article>
-          <article class="card"><div class="ico">▣</div><h3>Reels a krátká videa</h3><p>Vertikální videa pro Instagram Reels, TikTok a Facebook, připravená ke sdílení.</p></article>
-        </div>
+    <section class="hero">
+      <div class="container">
+        <h1>Vítejte u Tereza Creative</h1>
+        <p>Vytvářím moderní a responzivní weby, vizuální identity a kreativní obsah.</p>
+        <p><a class="btn" href="/portfolio.html">Prohlédnout portfolio</a></p>
       </div>
     </section>
 
-    <section id="ukazky">
-      <div class="wrap">
-        <div class="head">
-          <div class="eyebrow">Ukázky tvorby</div>
-          <h2>Každá práce má svůj příběh.</h2>
-        </div>
-        <p class="lead">Vytvářím obsah pro firmy, které chtějí být vidět, lidé je poznat a rozhodovat se pro ně snadněji.</p>
+    <section class="intro container">
+      <h2>Co nabízím</h2>
+      <div class="grid grid-3">
+        <article>
+          <h3>Webdesign</h3>
+          <p>Responzivní weby postavené s ohledem na UX a výkon.</p>
+        </article>
+        <article>
+          <h3>Branding</h3>
+          <p>Logo, vizuální styl a konzistentní design pro vaši značku.</p>
+        </article>
+        <article>
+          <h3>Portfolio</h3>
+          <p>Ukázky práce — od konceptu po nasazení.</p>
+        </article>
       </div>
     </section>
 
-    <section class="white" id="balicky">
-      <div class="wrap">
-        <div class="head">
-          <div class="eyebrow">Balíčky spolupráce</div>
-          <h2>Začněte v rozsahu, který vám vyhovuje.</h2>
-        </div>
-        <div class="grid">
-          <article class="price"><div class="plan">START</div><div class="amount">4 000 Kč</div><small>navrhovaná cena za balíček</small><p>Pro první krok a ověření, jaký obsah vám sedí.</p></article>
-          <article class="price feature"><div class="plan">STANDARD</div><div class="amount">8 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pravidelný obsah, který pomáhá zůstat zákazníkům v kontaktu.</p></article>
-          <article class="price"><div class="plan">PREMIUM</div><div class="amount">Od 12 000 Kč</div><small>navrhovaná cena za měsíc</small><p>Pro firmy, které chtějí tvořit obsah pravidelně a systematicky.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="postup">
-      <div class="wrap">
-        <div class="head">
-          <div class="eyebrow">Jak spolupráce probíhá</div>
-          <h2>Od nápadu k hotovému videu.</h2>
-        </div>
-        <p class="lead">Nejprve si domluvíme cíl, pak navrhnu obsah, natočíme a dokončíme vše tak, aby to bylo připravené ke zveřejnění.</p>
-      </div>
-    </section>
-
-    <section class="white" id="kontakt">
-      <div class="wrap contact-grid">
-        <div>
-          <div class="eyebrow">Pojďme se domluvit</div>
-          <h2>Napište mi a domluvíme se na dalším kroku.</h2>
-          <p id="hint"></p>
-        </div>
-        <form id="form">
-          <input name="name" type="text" placeholder="Jméno" required>
-          <input name="company" type="text" placeholder="Firma">
-          <input name="reply" type="email" placeholder="Email nebo telefon" required>
-          <select id="service" name="service">
-            <option value="">Vyberte službu</option>
-            <option value="Balíček START">Balíček START</option>
-            <option value="Balíček STANDARD">Balíček STANDARD</option>
-            <option value="Balíček PREMIUM">Balíček PREMIUM</option>
-          </select>
-          <textarea name="message" placeholder="Zpráva"></textarea>
-          <button type="submit">Odeslat</button>
-        </form>
+    <section class="container small">
+      <h2>Vybrané projekty</h2>
+      <div class="grid grid-3">
+        <a class="card" href="/portfolio.html#item1">
+          <img src="/assets/images/placeholder.svg" alt="Projekt 1">
+          <h4>Projekt 1</h4>
+        </a>
+        <a class="card" href="/portfolio.html#item2">
+          <img src="/assets/images/placeholder.svg" alt="Projekt 2">
+          <h4>Projekt 2</h4>
+        </a>
+        <a class="card" href="/portfolio.html#item3">
+          <img src="/assets/images/placeholder.svg" alt="Projekt 3">
+          <h4>Projekt 3</h4>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <a class="brand" href="#domu"><span class="mark"></span>TEREZA CREATIVE</a>
-    <span>Videa, která pomáhají získávat zákazníky.</span>
-    <span>© <span id="year"></span> Tereza Creative</span>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Tereza Creative · <a href="/contact.html">Kontakt</a></p>
+    </div>
   </footer>
 
-  <script>
-    const menu = document.getElementById('menu');
-    const links = document.getElementById('links');
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
 
-    if (menu && links) {
-      menu.addEventListener('click', () => {
-        links.classList.toggle('open');
-        menu.textContent = links.classList.contains('open') ? '×' : '☰';
-      });
-      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const CONTACT_EMAIL = 'tereza.creative@gmail.com';
-
-    document.getElementById('form')?.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!CONTACT_EMAIL) {
-        document.getElementById('hint').textContent = 'Formulář zatím není napojený na e-mail. Doplň svůj e-mail do proměnné CONTACT_EMAIL v index.html.';
-        return;
-      }
-
-      const d = new FormData(e.target);
-      const body = encodeURIComponent(
-        'Jméno: ' + d.get('name') + '\n' +
-        'Firma: ' + d.get('company') + '\n' +
-        'Kontakt: ' + d.get('reply') + '\n' +
-        'Služba: ' + d.get('service') + '\n\n' +
-        'Zpráva:\n' + d.get('message')
-      );
-
-      location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Poptávka – Tereza Creative') + '&body=' + body;
-    });
-  </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

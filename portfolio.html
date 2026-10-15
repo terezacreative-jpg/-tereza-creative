@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Tereza Creative</title>
+  <meta name="description" content="Portfolio Tereza Creative — ukázky projektů.">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">Tereza Creative</a>
+      <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false">☰</button>
+      <nav id="site-nav-3" class="site-nav">
+        <a href="/">Home</a>
+        <a href="/about.html">O mně</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/contact.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Portfolio</h1>
+
+    <div class="grid grid-3">
+      <figure id="item1" class="portfolio-item">
+        <img src="/assets/images/placeholder.svg" alt="Projekt 1" data-title="Projekt 1 — popis">
+        <figcaption>Projekt 1</figcaption>
+      </figure>
+
+      <figure id="item2" class="portfolio-item">
+        <img src="/assets/images/placeholder.svg" alt="Projekt 2" data-title="Projekt 2 — popis">
+        <figcaption>Projekt 2</figcaption>
+      </figure>
+
+      <figure id="item3" class="portfolio-item">
+        <img src="/assets/images/placeholder.svg" alt="Projekt 3" data-title="Projekt 3 — popis">
+        <figcaption>Projekt 3</figcaption>
+      </figure>
+
+      <!-- Více položek lze přidat zde -->
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close-2" class="lightbox-close">✕</button>
+    <img id="lightbox-img-2" src="" alt="">
+    <div id="lightbox-caption-2" class="lightbox-caption"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year-3"></span> Tereza Creative</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
